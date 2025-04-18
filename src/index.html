@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--============ Metatags ============-->
+    <title>Vehicle Form</title>
+    <meta name="description" content="A simple form that adds a vehicle. First project with TypeScript">
+    <meta name="keywords" content="HTML, CSS, TypeScript, JavaScript">
+    <meta name="author" content="Gabriele Prestano">
+
+    <!--============ Google Fonts ============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--============ CSS ============-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="submit" class="vehicle-form" data-form>
+            <div class="input-wrapper">
+                <input type="text" class="vehicle-plate" placeholder="Vehicle plate" required data-v-plate>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" class="vehicle-name" placeholder="Vehicle name" required data-v-name>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" class="vehicle-model" placeholder="Vehicle model" required data-v-model>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="number" class="vehicle-year" placeholder="Vehicle year" required data-v-year min="1970"
+                    max="2025">
+            </div>
+
+            <select name="option-wrapper" class="vehicle-type">
+                <option value="Car" class="option">Car</option>
+                <option value="Motorcycle" class="option">Motorcycle</option>
+                <option value="Truck" class="option">Truck</option>
+            </select>
+
+            <select name="option-wrapper" class="vehicle-fuel">
+                <option value="Gasoline" class="option">Gasoline</option>
+                <option value="Diesel" class="option">Diesel</option>
+                <option value="Electric" class="option">Electric</option>
+            </select>
+
+            <button type="submit" class="submit" data-submit>Register Vehicle</button>
+        </form>
+
+        <button class="showVehicles" data-show>Show Vehicles</button>
+        <ul class="show-vehicles"></ul>
+    </div>
+
+    <!--============ JavaScript ============-->
+    <script type="module" src="../dist/app.js" defer></script>
+</body>
+
+</html>
